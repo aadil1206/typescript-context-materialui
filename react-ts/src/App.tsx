@@ -8,17 +8,18 @@ import {useContext} from "react";
 
 function App() {
   const {open} =useContext(Logincontext)
-
+{console.log(open)}
   return (
     <>
       {open ? (
-        <Routes>
-          <Route path="/*" element={<Login />} />
-        </Routes>
+       
+         <Routes>
+        
+         <Route path="/page" element={<Page />} />
+         </Routes>
       ) : (
         <Routes>
-        
-        <Route path="/page" element={<Page />} />
+          <Route path="/*" element={<Login />} />
         </Routes>
       )}
     </>

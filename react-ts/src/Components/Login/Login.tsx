@@ -22,8 +22,9 @@ const Login = () => {
   const {setopen,open} =useContext(Logincontext)
   
   const navigate = useNavigate();
+  {console.log(open)}
   const handleSubmit = () => {
-     !open&&navigate('/page');
+     navigate('/page');
   };
   
   
@@ -49,7 +50,7 @@ const Login = () => {
       validationSchema={validationSchema}
       onSubmit={(values)=>{
         setItem(values)
-         setopen(false)
+         setopen(true)
         console.log(values)
       }}    >
            {({

@@ -6,7 +6,7 @@ interface LoginContextProviderProps {
 }
 
 const LoginContextProvider: React.FC<LoginContextProviderProps> = ({ children }) => {
-  const [open,setopen]= useState(true)
+  const [open,setopen]= useState(false)
   return (
     <Logincontext.Provider value={{open,setopen}}>
       {children}
